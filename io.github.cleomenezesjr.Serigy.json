@@ -43,6 +43,10 @@
           "url": "https://github.com/CleoMenezesJr/Serigy.git",
           "tag": "2.0.0",
           "commit": "7ae125ff213862a624b8c6538e2c5d80c9163c39"
+        },
+        {
+          "type": "patch",
+          "path": "fix-appdata.patch"
         }
       ]
     }
