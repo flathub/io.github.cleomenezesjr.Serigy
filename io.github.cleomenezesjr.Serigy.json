@@ -1,7 +1,7 @@
 {
   "id": "io.github.cleomenezesjr.Serigy",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "48",
+  "runtime-version": "50",
   "sdk": "org.gnome.Sdk",
   "command": "serigy",
   "finish-args": [
@@ -11,26 +11,25 @@
     "--socket=fallback-x11"
   ],
   "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "*.la",
-    "*.a"
+      "/include",
+      "/lib/pkgconfig"
   ],
   "modules": [
     {
-      "name": "blueprint-compiler",
+      "name": "libportal",
       "buildsystem": "meson",
-      "cleanup": ["*"],
+      "config-opts": [
+        "-Dbackend-gtk4=enabled",
+        "-Dvapi=false",
+        "-Ddocs=false",
+        "-Dtests=false"
+      ],
       "sources": [
         {
           "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-          "tag": "v0.16.0"
+          "url": "https://github.com/flatpak/libportal.git",
+          "tag": "0.9.1",
+          "commit": "8f5dc8d192f6e31dafe69e35219e3b707bde71ce"
         }
       ]
     },
@@ -42,8 +41,8 @@
         {
           "type": "git",
           "url": "https://github.com/CleoMenezesJr/Serigy.git",
-          "tag": "1.1",
-          "commit": "34db3e1146c494555703f6d5ed399c94c0da05ea"
+          "tag": "2.0.0",
+          "commit": "7ae125ff213862a624b8c6538e2c5d80c9163c39"
         }
       ]
     }
