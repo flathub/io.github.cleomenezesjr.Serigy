@@ -41,8 +41,8 @@
         {
           "type": "git",
           "url": "https://github.com/CleoMenezesJr/Serigy.git",
-          "tag": "2.1.1",
-          "commit": "e94bc473790851ac675d04328d77ff3772c0837e"
+          "tag": "2.3.0",
+          "commit": "e94ed8c3e24c5b9e8f17b4f665c252f5bcc4ba0b"
         }
       ]
     }
